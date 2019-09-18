@@ -1,10 +1,10 @@
 from classes.Sorter import *
 
 
-class BubbleSort(Sorter):
+class BubbleSortPlus(Sorter):
     def __init__(self, entrada):
         #   Passar o nome do algoritmo de ordenação no primeiro parâmetro
-        super().__init__("BubbleSort", entrada)
+        super().__init__("BubbleSort+", entrada)
 
     #   Metodo abstrato que executará a ordenação (chamado uma vez só, qualquer
     #   recursão deve ser feita usando outros métodos)
@@ -17,12 +17,16 @@ class BubbleSort(Sorter):
         if tamanho_entrada == 0:
             print("["+ self.nome +"]", " ERRO: Algoritmo nao possui entrada!")
 
+        trocado = False
         for i in range(0, tamanho_entrada - 1):
             for j in range(0, tamanho_entrada - 1 - i):
                 if entrada[j] > entrada[j + 1]:
                     hold_this_number_please = entrada[j]
                     entrada[j] = entrada[j + 1]
                     entrada[j + 1] = hold_this_number_please
+                    trocado = True
+            if trocado is False:
+                break
 
         self.setSaida(entrada)
         return entrada
