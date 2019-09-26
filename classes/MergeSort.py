@@ -7,7 +7,6 @@ class MergeSort(Sorter):
     def __init__(self, entrada):
         super().__init__("ShellSort", entrada)
 
-
     def sort(self):
 
         entrada = self.getEntrada()
@@ -24,11 +23,8 @@ class MergeSort(Sorter):
             listaEsquerda = esquerda.sort()
             listaDireita = direita.sort()
 
-
             #contadores, i controla a listaEsquerda, j a listaDireita e k a lista final
-            i = 0
-            j = 0
-            k = 0
+            i = j = k = 0
 
             while(i < len(listaEsquerda) and j < len(listaDireita)):
                 if(listaEsquerda[i] < listaDireita[j]):
