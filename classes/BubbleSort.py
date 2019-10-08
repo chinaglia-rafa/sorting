@@ -1,4 +1,4 @@
-from classes.Sorter import *
+from Sorter import *
 
 
 class BubbleSort(Sorter):

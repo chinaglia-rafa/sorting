@@ -1,7 +1,7 @@
 from Sorter import *
 from random import randint
 
-debug = 1
+debug = 0
 
 class SelectionSort(Sorter):
 	def __init__ (self, entrada):
