@@ -24,15 +24,20 @@ lista_de_entradas = [entrada0, entrada1, entrada2, entrada3, entrada4, entrada5,
                     entrada6]
 
 #CRIAÇÃO E MEDIÇÃO DOS OBJETOS E DE SEUS RESPECTIVOS METODOS DE ORDENAÇÃO
-#BubbleSort
-Bubble_Sort_Tempos = []
+#TO DO: INSERIR QUICK SORTS
+times = []
 for entrada in lista_de_entradas:
-    Bubble = BubbleSort(entrada)
-    #MEDINDO TEMPO DE ORDENAÇÃO
-    start = time.time()
-    Bubble.sort()
-    end = time.time()
+    sorters = [BubbleSort(entrada), BubbleSortPlus(entrada), HeapSort(entrada), InsertionSort(entrada), MergeSort(entrada), SelectionSort(entrada),
+                ShellSort(entrada)]
 
-    tempo = end - start
-    Bubble_Sort_Tempos.append(tempo)
-    print("TEMPO BUBBLE: ", tempo)
+    #MEDINDO TEMPO DE ORDENAÇÃO
+    for sorter in sorters:
+        start = time.time()
+        sorter.sort()
+        end = time.time()
+
+        tempo = end - start
+        times.append(tempo)
+
+        
+        print("TEMPO",sorter.nome ,len(entrada),"ENTRADAS:", tempo)
