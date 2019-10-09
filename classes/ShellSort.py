@@ -8,7 +8,7 @@ class ShellSort(Sorter):
         super().__init__("ShellSort", entrada)
 
     def sort(self):
-        entrada = self.getEntrada()
+        entrada = self.getEntrada()[:]
         size = len(entrada)
         gap = int(size/2)
 

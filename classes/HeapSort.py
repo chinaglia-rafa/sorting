@@ -31,7 +31,7 @@ class HeapSort(Sorter):
 
     # funcao que ordena o array
     def sort(self):
-        entrada = self.getEntrada()
+        entrada = self.getEntrada()[:]
         n = len(entrada)
 
         for i in range(n, -1, -1):

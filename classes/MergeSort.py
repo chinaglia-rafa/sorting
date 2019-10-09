@@ -9,7 +9,7 @@ class MergeSort(Sorter):
 
     def sort(self):
 
-        entrada = self.getEntrada()
+        entrada = self.getEntrada()[:]
 
         if(len(entrada) > 1):
             meio = len(entrada)//2
