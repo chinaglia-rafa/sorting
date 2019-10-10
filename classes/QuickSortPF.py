@@ -64,9 +64,9 @@ def quickSortIterative(arr,l,h):
             stack[top] = h
 
 
-class QuickSortPI(Sorter):
+class QuickSortPF(Sorter):
     def __init__(self, entrada):
-        super().__init__("QuickSortPI", entrada)
+        super().__init__("QuickSortPF", entrada)
 
     def sort(self):
         entrada = self.getEntrada()[:]
@@ -78,5 +78,5 @@ if (debug):
     for i in range(50000):
         l.append(randint(0, 1000))
     print ("Array Desordenado:\n", l, "\n")
-    teste = QuickSortPI(l)
+    teste = QuickSortPF(l)
     print ("Array Ordenado:\n", teste.sort())
