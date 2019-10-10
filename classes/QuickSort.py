@@ -26,8 +26,10 @@ class QuickSort(Sorter):
         super().__init__("QuickSort", entrada)
 
     def sort(self):
-        entrada = self.getEntrada()
+        entrada = self.getEntrada()[:]
         quick_sort(entrada, 0, len(entrada) - 1)
+
+        self.setSaida(entrada)
         return entrada
 
 if (debug):
