@@ -14,7 +14,7 @@ tamanhos = [1000, 5000, 10000, 15000, 20000, 25000, 30000]
 #CRIAÇÃO E MEDIÇÃO DOS OBJETOS E DE SEUS RESPECTIVOS METODOS DE ORDENAÇÃO
 #COM NUMEROS GERADOS ALEATORIAMENTE
 def medicao_tempo(lista_de_entradas):
-    times_aleatorio = []
+    times = []
     for entrada in lista_de_entradas:
         print("\n\n", len(entrada), "Entradas \n\n")
         sorters = [BubbleSortPlus(entrada[:]), BubbleSort(entrada[:]), QuickSortPF(entrada[:]), QuickSort(entrada[:]), HeapSort(entrada[:]), InsertionSort(entrada[:]), MergeSort(entrada[:]), SelectionSort(entrada[:]),
@@ -27,10 +27,12 @@ def medicao_tempo(lista_de_entradas):
             end = time.time()
 
             tempo = end - start
-            times_aleatorio.append(tempo)
+            times.append(tempo)
 
 
             print("TEMPO",sorter.nome ,len(entrada),"ENTRADAS:", tempo)
+
+    return times
 
 def reset_entradas(lista_de_entradas):
     for entrada in lista_de_entradas:
@@ -55,7 +57,7 @@ lista_de_entradas1 = [entrada0, entrada1, entrada2, entrada3, entrada4, entrada5
 
 
 #CHAMANDO FUNÇÃO DE MEDICAO COM NUMEROS ALEATORIOS
-#medicao_tempo(lista_de_entradas1)
+#tempo_aleatorio = medicao_tempo(lista_de_entradas1)
 
 
 #---------------------------- NUMEROS EM ORDEM CRESCENTE ---------------------------------------#
@@ -78,7 +80,7 @@ for i in range(tamanhos[5]):
 for i in range(tamanhos[6]):
         lista_de_entradas2[6].append(i)
 
-#medicao_tempo(lista_de_entradas2)
+#tempo_crescente = medicao_tempo(lista_de_entradas2)
 
 
 #---------------------------- NUMEROS EM ORDEM DECRESCENTE ---------------------------------------#
@@ -101,4 +103,4 @@ for i in range(tamanhos[5]):
 for i in range(tamanhos[6]):
         lista_de_entradas3[6].append(tamanhos[6] - i)
 
-medicao_tempo(lista_de_entradas3)
+tempos_decrescente = medicao_tempo(lista_de_entradas3)
