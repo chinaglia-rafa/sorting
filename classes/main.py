@@ -6,6 +6,7 @@ from InsertionSort import *
 from MergeSort import *
 from SelectionSort import *
 from ShellSort import *
+from QuickSort import *
 import time
 
 tamanhos = [1000, 5000, 10000, 15000, 20000, 25000, 30000]
@@ -27,7 +28,7 @@ lista_de_entradas = [entrada0, entrada1, entrada2, entrada3, entrada4, entrada5,
 #TO DO: INSERIR QUICK SORTS
 times = []
 for entrada in lista_de_entradas:
-    sorters = [BubbleSort(entrada), BubbleSortPlus(entrada), HeapSort(entrada), InsertionSort(entrada), MergeSort(entrada), SelectionSort(entrada),
+    sorters = [QuickSort(entrada), QuickSortPI(entrada), BubbleSort(entrada), BubbleSortPlus(entrada), HeapSort(entrada), InsertionSort(entrada), MergeSort(entrada), SelectionSort(entrada),
                 ShellSort(entrada)]
 
     #MEDINDO TEMPO DE ORDENAÇÃO
@@ -39,5 +40,5 @@ for entrada in lista_de_entradas:
         tempo = end - start
         times.append(tempo)
 
-        
+
         print("TEMPO",sorter.nome ,len(entrada),"ENTRADAS:", tempo)
