@@ -13,6 +13,7 @@ import time
 tamanhos = [1000, 5000, 10000, 15000, 20000, 25000, 30000]
 #CRIAÇÃO E MEDIÇÃO DOS OBJETOS E DE SEUS RESPECTIVOS METODOS DE ORDENAÇÃO
 #COM NUMEROS GERADOS ALEATORIAMENTE
+
 def medicao_tempo(lista_de_entradas):
     times_aleatorio = []
     for entrada in lista_de_entradas:
