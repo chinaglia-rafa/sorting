@@ -10,6 +10,8 @@ from QuickSort import *
 from QuickSortPF import *
 import time
 
+total_start = time.time()
+
 tamanhos = [1000, 5000, 10000, 15000, 20000, 25000, 30000]
 #CRIAÇÃO E MEDIÇÃO DOS OBJETOS E DE SEUS RESPECTIVOS METODOS DE ORDENAÇÃO
 #COM NUMEROS GERADOS ALEATORIAMENTE
@@ -28,7 +30,7 @@ def medicao_tempo(lista_de_entradas):
             end = time.time()
 
             tempo = end - start
-            times.append(tempo)
+            times.append([sorter.nome, len(entrada), tempo])
 
 
             print("TEMPO",sorter.nome ,len(entrada),"ENTRADAS:", tempo)
@@ -40,6 +42,8 @@ def reset_entradas(lista_de_entradas):
         entrada.clear()
     return lista_de_entradas
 
+
+tempo_aleatorio = tempo_crescente = tempos_decrescente = []
 
 #---------------------------- NUMEROS EM ORDEM ALEATORIA ---------------------------------------#
 
@@ -58,7 +62,7 @@ lista_de_entradas1 = [entrada0, entrada1, entrada2, entrada3, entrada4, entrada5
 
 
 #CHAMANDO FUNÇÃO DE MEDICAO COM NUMEROS ALEATORIOS
-#tempo_aleatorio = medicao_tempo(lista_de_entradas1)
+tempo_aleatorio = medicao_tempo(lista_de_entradas1)
 
 
 #---------------------------- NUMEROS EM ORDEM CRESCENTE ---------------------------------------#
@@ -81,7 +85,7 @@ for i in range(tamanhos[5]):
 for i in range(tamanhos[6]):
         lista_de_entradas2[6].append(i)
 
-#tempo_crescente = medicao_tempo(lista_de_entradas2)
+tempo_crescente = medicao_tempo(lista_de_entradas2)
 
 
 #---------------------------- NUMEROS EM ORDEM DECRESCENTE ---------------------------------------#
@@ -105,3 +109,18 @@ for i in range(tamanhos[6]):
         lista_de_entradas3[6].append(tamanhos[6] - i)
 
 tempos_decrescente = medicao_tempo(lista_de_entradas3)
+
+file = open("results.csv", "w")
+first_line = '"Algoritmo", "entrada", "tempo"\n'
+file.write(first_line)
+for line in tempo_aleatorio + tempo_crescente + tempos_decrescente:
+    current_line = "\"" + str(line[0]) + "\"," + str(line[1]) + "," +str(line[2]) + "\n"
+    file.write(current_line)
+
+total_end = time.time()
+
+total_delta = total_end - total_start
+
+print("Arquivo de saida results.csv gerado!")
+
+print("\nCodigo finalizado em", total_delta, "segundos!")
