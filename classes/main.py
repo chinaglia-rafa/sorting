@@ -12,7 +12,7 @@ import time
 
 total_start = time.time()
 
-tamanhos = [1000, 5000, 10000, 15000, 20000, 25000, 30000]
+tamanhos = [1000, 5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000]
 #CRIAÇÃO E MEDIÇÃO DOS OBJETOS E DE SEUS RESPECTIVOS METODOS DE ORDENAÇÃO
 #COM NUMEROS GERADOS ALEATORIAMENTE
 
@@ -55,6 +55,10 @@ entrada3 = Sorter.gerar_entrada(tamanhos[3])
 entrada4 = Sorter.gerar_entrada(tamanhos[4])
 entrada5 = Sorter.gerar_entrada(tamanhos[5])
 entrada6 = Sorter.gerar_entrada(tamanhos[6])
+entrada7 = Sorter.gerar_entrada(tamanhos[7])
+entrada8 = Sorter.gerar_entrada(tamanhos[8])
+entrada9 = Sorter.gerar_entrada(tamanhos[9])
+entrada10 = Sorter.gerar_entrada(tamanhos[10])
 
 #LISTA COM LISTAS DE ENTRADA
 lista_de_entradas1 = [entrada0, entrada1, entrada2, entrada3, entrada4, entrada5,
@@ -84,6 +88,14 @@ for i in range(tamanhos[5]):
         lista_de_entradas2[5].append(i)
 for i in range(tamanhos[6]):
         lista_de_entradas2[6].append(i)
+for i in range(tamanhos[7]):
+        lista_de_entradas2[7].append(i)
+for i in range(tamanhos[8]):
+        lista_de_entradas2[8].append(i)
+for i in range(tamanhos[9]):
+        lista_de_entradas2[9].append(i)
+for i in range(tamanhos[10]):
+        lista_de_entradas2[10].append(i)
 
 tempo_crescente = medicao_tempo(lista_de_entradas2)
 
@@ -107,7 +119,15 @@ for i in range(tamanhos[5]):
         lista_de_entradas3[5].append(tamanhos[5] - i)
 for i in range(tamanhos[6]):
         lista_de_entradas3[6].append(tamanhos[6] - i)
-
+for i in range(tamanhos[7]):
+        lista_de_entradas3[7].append(tamanhos[7] - i)
+for i in range(tamanhos[8]):
+        lista_de_entradas3[8].append(tamanhos[8] - i)
+for i in range(tamanhos[9]):
+        lista_de_entradas3[9].append(tamanhos[9] - i)
+for i in range(tamanhos[10]):
+        lista_de_entradas3[10].append(tamanhos[10] - i)
+        
 tempos_decrescente = medicao_tempo(lista_de_entradas3)
 
 file = open("results.csv", "w")
