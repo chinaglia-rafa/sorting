@@ -1,8 +1,6 @@
 from Sorter import *
 from random import randint
 
-debug = 0
-
 class HeapSort(Sorter):
     def __init__(self, entrada):
         super().__init__("HeapSort", entrada)
@@ -44,13 +42,3 @@ class HeapSort(Sorter):
         self.setSaida(entrada)
         return entrada
 
-#Area de testes
-
-if (debug):
-	l = [randint(0, 1000), randint(0, 1000), randint(0, 1000),
-		 randint(0, 1000), randint(0, 1000), randint(0, 1000),
-		 randint(0, 1000), randint(0, 1000), randint(0, 1000)]
-	#l = [5, 4, 3, 2, 1]
-	print ("Array Desordenado:\n", l, "\n")
-	teste = HeapSort(l)
-	print ("Array Ordenado:\n", teste.sort())
