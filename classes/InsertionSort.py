@@ -24,14 +24,3 @@ class InsertionSort(Sorter):
         self.setSaida(entrada)
         return entrada
 
-
-
-#AREA DE TESTES
-#
-# arr = [12, 11, 13, 5, 6]
-#
-# test = InsertionSort(arr)
-#
-# arr2 = test.sort()
-#
-# print(arr2)

@@ -1,6 +1,6 @@
 from Sorter import *
 from random import randint
-debug = 0
+
 def partition(lst, start, end, pivot):
     lst[pivot], lst[end] = lst[end], lst[pivot]
     store_index = start
@@ -32,11 +32,3 @@ class QuickSort(Sorter):
         self.setSaida(entrada)
         return entrada
 
-if (debug):
-	l = [randint(0, 1000), randint(0, 1000), randint(0, 1000),
-		 randint(0, 1000), randint(0, 1000), randint(0, 1000),
-		 randint(0, 1000), randint(0, 1000), randint(0, 1000)]
-	#l = [5, 4, 3, 2, 1]
-	print ("Array Desordenado:\n", l, "\n")
-	teste = QuickSort(l)
-	print ("Array Ordenado:\n", teste.sort())

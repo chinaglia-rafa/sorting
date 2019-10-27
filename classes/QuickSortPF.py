@@ -1,6 +1,6 @@
 from Sorter import *
 from random import randint
-debug = 0
+
 def partition(arr,l,h):
     i = ( l - 1 )
     x = arr[h]
@@ -72,11 +72,3 @@ class QuickSortPF(Sorter):
         entrada = self.getEntrada()[:]
         quickSortIterative(entrada, 0, len(entrada) - 1)
         return entrada
-
-if (debug):
-    l = []
-    for i in range(50000):
-        l.append(randint(0, 1000))
-    print ("Array Desordenado:\n", l, "\n")
-    teste = QuickSortPF(l)
-    print ("Array Ordenado:\n", teste.sort())
