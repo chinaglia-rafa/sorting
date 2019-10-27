@@ -5,7 +5,7 @@ debug = 0
 
 class MergeSort(Sorter):
     def __init__(self, entrada):
-        super().__init__("ShellSort", entrada)
+        super().__init__("MergeSort", entrada)
 
     def sort(self):
 
