@@ -5,7 +5,7 @@ Sorting algorythms for PAA discipline
 O relatório contendo os resultados das experimentações e as análises assintóticas pode ser encontrado [aqui](https://docs.google.com/document/d/1JouZd5x6Ylft655T2TfiniqZ8WH5X8JA4koLahuqc_Y/edit?usp=sharing).
 
 # Dados Processados
-Os resultados de tempo de todas as formas de ordenações para diversas configurações de entradas podem ser encontrados [aqui](https://docs.google.com/spreadsheets/d/1vm5tI9ox4-5tkiaHwZHNDTMruQKibMIiji5yjeC1-JA/edit?usp=sharing).
+Os resultados de tempo de todas as formas de ordenações para diversas configurações de entradas podem ser encontrados [aqui](https://docs.google.com/spreadsheets/d/1TJWT79Hvof3naa_keOJX1UVmijYtzdI9Lk3rt_j9_EQ/edit?usp=sharing).
 
 ## Algoritmos implementados
 
