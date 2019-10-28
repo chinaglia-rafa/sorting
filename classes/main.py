@@ -62,7 +62,7 @@ entrada10 = Sorter.gerar_entrada(tamanhos[10])
 
 #LISTA COM LISTAS DE ENTRADA
 lista_de_entradas1 = [entrada0, entrada1, entrada2, entrada3, entrada4, entrada5,
-                    entrada6]
+                    entrada6, entrada7, entrada8, entrada9, entrada10]
 
 
 #CHAMANDO FUNÇÃO DE MEDICAO COM NUMEROS ALEATORIOS
@@ -127,7 +127,7 @@ for i in range(tamanhos[9]):
         lista_de_entradas3[9].append(tamanhos[9] - i)
 for i in range(tamanhos[10]):
         lista_de_entradas3[10].append(tamanhos[10] - i)
-        
+
 tempos_decrescente = medicao_tempo(lista_de_entradas3)
 
 file = open("results.csv", "w")
